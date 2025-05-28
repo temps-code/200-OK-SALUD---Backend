@@ -1,0 +1,6 @@
+@_200_OK_SALUD___Backend_HostAddress = http://localhost:5049
+
+GET {{_200_OK_SALUD___Backend_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

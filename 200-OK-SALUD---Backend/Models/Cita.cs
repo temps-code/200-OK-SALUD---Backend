@@ -1,6 +1,5 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
 
 namespace _200_OK_SALUD___Backend.Models
 {
@@ -28,5 +27,9 @@ namespace _200_OK_SALUD___Backend.Models
 
         [Required]
         public int NumeroTurno { get; set; }
+
+        public bool IsActive { get; set; } = true;
+        public DateTime CreatedAt { get; set; }
+        public DateTime UpdatedAt { get; set; }
     }
 }

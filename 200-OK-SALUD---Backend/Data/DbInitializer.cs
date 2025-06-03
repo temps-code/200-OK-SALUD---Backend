@@ -37,7 +37,6 @@ namespace _200_OK_SALUD___Backend.Data
                     Email = adminEmail,
                     EmailConfirmed = true
                 };
-                // Cambia “Admin123!” por la contraseña que desees (mínimo 6 caracteres y cumpla la política)
                 var result = await userManager.CreateAsync(newAdmin, "Admin123!");
                 if (result.Succeeded)
                 {

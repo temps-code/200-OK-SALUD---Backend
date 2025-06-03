@@ -15,5 +15,12 @@ namespace _200_OK_SALUD___Backend.Models
 
         [Required]
         public decimal Peso { get; set; } // DECIMAL(5,2)
+
+        // Soft-delete lógico
+        public bool IsActive { get; set; } = true;
+
+        // Auditoría
+        public DateTime CreatedAt { get; set; }
+        public DateTime UpdatedAt { get; set; }
     }
 }

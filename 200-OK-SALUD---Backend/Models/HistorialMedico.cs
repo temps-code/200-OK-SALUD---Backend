@@ -17,5 +17,12 @@ namespace _200_OK_SALUD___Backend.Models
         public DateTime FechaRegistro { get; set; }
 
         public string Descripcion { get; set; }
+
+        // Soft-delete lógico
+        public bool IsActive { get; set; } = true;
+
+        // Auditoría
+        public DateTime CreatedAt { get; set; }
+        public DateTime UpdatedAt { get; set; }
     }
 }

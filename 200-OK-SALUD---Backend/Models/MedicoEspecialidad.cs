@@ -14,5 +14,12 @@ namespace _200_OK_SALUD___Backend.Models
         [ForeignKey(nameof(Especialidad))]
         public int EspecialidadId { get; set; }
         public Especialidad Especialidad { get; set; }
+
+        // Soft-delete lógico
+        public bool IsActive { get; set; } = true;
+
+        // Auditoría
+        public DateTime CreatedAt { get; set; }
+        public DateTime UpdatedAt { get; set; }
     }
 }

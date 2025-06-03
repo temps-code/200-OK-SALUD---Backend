@@ -1,4 +1,6 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace _200_OK_SALUD___Backend.Models
 {
@@ -10,7 +12,13 @@ namespace _200_OK_SALUD___Backend.Models
         [Required, MaxLength(100)]
         public string Nombre { get; set; }
 
-        // Relación inversa a Médicos
+        // Soft-delete lógico
+        public bool IsActive { get; set; } = true;
+
+        // Auditoría
+        public DateTime CreatedAt { get; set; }
+        public DateTime UpdatedAt { get; set; }
+
         public ICollection<MedicoEspecialidad> MedicoEspecialidades { get; set; }
     }
 }

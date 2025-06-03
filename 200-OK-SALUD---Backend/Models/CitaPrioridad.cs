@@ -13,6 +13,14 @@ namespace _200_OK_SALUD___Backend.Models
         [Key, Column(Order = 1)]
         [ForeignKey(nameof(ReglaPrioridad))]
         public int ReglaId { get; set; }
+
         public ReglaPrioridad ReglaPrioridad { get; set; }
+        
+        // Soft-delete lógico
+        public bool IsActive { get; set; } = true;
+
+        // Auditoría
+        public DateTime CreatedAt { get; set; }
+        public DateTime UpdatedAt { get; set; }
     }
 }

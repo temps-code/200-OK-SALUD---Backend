@@ -23,6 +23,13 @@ namespace _200_OK_SALUD___Backend.Models
         [MaxLength(20)]
         public string Telefono { get; set; }
 
+        // Soft-delete lógico
+        public bool IsActive { get; set; } = true;
+
+        // Auditoría
+        public DateTime CreatedAt { get; set; }
+        public DateTime UpdatedAt { get; set; }
+
         // ESTA LÍNEA es necesaria para la relación 1:N con Cita
         public ICollection<Cita> Citas { get; set; }
 

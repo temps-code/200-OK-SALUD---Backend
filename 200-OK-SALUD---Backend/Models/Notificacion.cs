@@ -23,5 +23,12 @@ namespace _200_OK_SALUD___Backend.Models
 
         [Required]
         public bool EsAlertaTurno { get; set; } = false;
+
+        // Soft-delete lógico
+        public bool IsActive { get; set; } = true;
+
+        // Auditoría
+        public DateTime CreatedAt { get; set; }
+        public DateTime UpdatedAt { get; set; }
     }
 }
